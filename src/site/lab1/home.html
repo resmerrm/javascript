@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button to Remove H1 Element</title>
+    <script>
+        function removeH1() {
+            var h1Element = document.querySelector('h1');
+            if (h1Element) {
+                h1Element.remove();
+            }
+        }
+
+        function restoreH1() {
+            var bodyElement = document.querySelector('body');
+            var h1Element = document.createElement('h1');
+            h1Element.innerText = 'This is the H1 heading';
+            bodyElement.prepend(h1Element);
+        }
+    </script>
+</head>
+<body>
+<h1>This is the H1 heading</h1>
+<button onclick="removeH1()">Remove H1</button>
+<button onclick="restoreH1()">Restore H1</button>
+</body>
+</html>

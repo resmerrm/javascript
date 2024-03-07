@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Практична робота_01-JS01</title>
+    <style>
+        h1 {
+            font: Monaco, Courier, monospace 28px;
+            color: #618ad2;
+        }
+    </style>
+</head>
+<body>
+<h1>Підключення внутрішніх скриптів JavaScript</h1>
+<p id="blinking">Підключення скриптів можна виконувати різними способами. <br/> Один із способів полягає в описі
+    скриптів прямо всередині HTML-сторінки.</p>
+<script>
+// ---Застосування методу DOM getElementById для пошуку елементу з id ="blinking"---
+    var p = document.getElementById("blinking");
+// --- метод setInterval - пповторює певні дії через вказаний проміжок ---часу:setInterval (function(){}, час);
+    setInterval(function () {
+        if (p.style.fontSize == "13px") {
+// ---Задаємо всім абзацам розмір шрифту та колір---
+            p.style.fontSize = "18px";
+            p.style.color = '#D25424';
+        } else {
+            p.style.fontSize = "13px";
+            p.style.color = '#9E1AD2';
+        }
+    }, 2000);
+</script>
+</body>
+</html>

@@ -17,19 +17,9 @@
 </head>
 <body>
 <div class="lamp" id="lamp"></div>
-<button onclick="switchOn()">Включити</button>
-<button onclick="switchOff()">Виключити</button>
+<button id="onButton">Включити</button>
+<button id="offButton">Виключити</button>
 
-<script>
-    var lamp = document.getElementById('lamp');
-
-    function switchOn() {
-      lamp.style.backgroundColor = 'yellow';
-    }
-
-    function switchOff() {
-      lamp.style.backgroundColor = 'white';
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>

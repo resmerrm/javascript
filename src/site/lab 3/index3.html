@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+
+<p id="elem">Вміст блока.</p>
+<button onclick="str_del()">ВИДАЛИТИ</button>
+
+<script>
+    function str_del() {
+      var elem = document.getElementById("elem");
+      var content = elem.innerHTML;
+      elem.innerHTML = content.substring(0, content.length - 1);
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Видалення виділеного тексту</title>
+</head>
+<body>
+<p id="elem">Текст, який можна виділити і видалити.</p>
+<button onclick="str_del()">Видалити виділений текст</button>
+
+<script>
+    // Оголошуємо функцію для видалення виділеного тексту
+    function str_del() {
+      // Отримуємо виділений текст
+      var selection = window.getSelection().toString();
+
+      // Отримуємо текстовий вміст елемента з id "elem"
+      var str = document.getElementById("elem").textContent;
+
+      // Знаходимо початковий та кінцевий індекси виділеного тексту
+      var start = str.indexOf(selection);
+      var end = start + selection.length;
+
+      // Видаляємо виділений текст з текстового вмісту
+      var result = str.slice(0, start) + str.slice(end);
+
+      // Заповнюємо текстовий вміст елемента результатом
+      document.getElementById("elem").textContent = result;
+
+      // Виводимо результат в консоль
+      console.log("Видалено виділений текст:", selection);
+      console.log("Результат:", result);
+    }
+  </script>
+<script>
+function isGreaterThan(num1, num2) {
+return num1 > num2;
+}
+
+function isEven(num) {
+return num % 2 === 0;
+}
+
+function isSameLength(word1, word2) {
+return word1.length === word2.length;
+}
+
+function isEvenAndGreaterThanTen(num) {
+return num % 2 === 0 && num > 10;
+}
+
+function computeAreaOfATriangle(base, height) {
+return 0.5 * base * height;
+}
+
+// Приклади використання:
+var output1 = isGreaterThan(11, 10);
+console.log(output1); //--> false
+
+var output2 = isEven(11);
+console.log(output2); //--> false
+
+var output3 = isSameLength('words', 'super');
+console.log(output3); //--> true
+
+var output4 = isEvenAndGreaterThanTen(13);
+console.log(output4); //--> false
+
+var output5 = computeAreaOfATriangle(4, 6);
+console.log(output5); //--> 12
+</script>
+</body>
+</html>

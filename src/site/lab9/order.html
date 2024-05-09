@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Замовлення меблів</title>
+</head>
+<body>
+<h2>Замовлення меблів</h2>
+<form name="orderForm" method="post" action="process_order.php">
+  <p>Виберіть виріб:
+    <select name="product">
+      <option value="шафа">Шафа</option>
+      <option value="стіл">Стіл</option>
+      <option value="сервант">Сервант</option>
+    </select>
+  </p>
+  <p>Виберіть матеріал:
+    <select name="material">
+      <option value="дуб">Дуб</option>
+      <option value="горіх">Горіх</option>
+      <option value="бук">Бук</option>
+    </select>
+  </p>
+  <p>Введіть кількість:
+    <input type="number" name="quantity" required>
+  </p>
+  <input type="submit" value="Відправити">
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перегляд фотографій</title>
+  <script>
+        var photos = new Array();
+        photos["forest"] = new Image(400, 550);
+        photos["forest"].src = "forest.jpg";
+        photos["mountain"] = new Image(400, 550);
+        photos["mountain"].src = "mountain.jpg";
+        photos["beach"] = new Image(400, 550);
+        photos["beach"].src = "beach.jpg";
+
+        function showPhoto(select) {
+            var selectedPhoto = select.options[select.selectedIndex].value;
+            document.getElementById("photo").src = photos[selectedPhoto].src;
+        }
+    </script>
+</head>
+<body>
+<h2>Перегляд фотографій</h2>
+<p>Виберіть фотографію:</p>
+<select onchange="showPhoto(this)">
+  <option value="forest">Ліс</option>
+  <option value="mountain">Гори</option>
+  <option value="beach">Пляж</option>
+</select>
+<br><br>
+<img id="photo" src="forest.jpg" alt="Фото">
+</body>
+</html>
